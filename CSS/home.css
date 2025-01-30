@@ -1,0 +1,510 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1f242d;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+   display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 80px;
+}
+
+.navbar ul li a {
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    color: #7cf03d;
+}
+
+.home {
+    
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    display: flex;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info p {
+    margin: 10px 0 25px;
+    line-height: 1.6;
+    display: flex;
+}
+
+.home-info .btn-sci {
+   
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7cf03d;
+    border: 2px solid #7cf03d;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #7cf03d;
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #7cf03d;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf03d;
+}
+
+
+.home-img .img-box {
+    width: 300px;
+    height: 300px;
+    background: red;
+    border-radius: 50%;
+}
+
+.home-img .img-box .img-item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: slateblue;
+    border-radius: 50%;
+
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img{
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.skills-section {
+    padding: 50px 9%;
+}
+
+.skills-section h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf03d;
+}
+
+.skill-box i {
+    font-size: 40px;
+    color: #7cf03d;
+    margin-bottom: 10px;
+}
+
+.skill-box h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.skill-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.progress-bar {
+    background: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: #7cf03d;
+    width: 0%;
+    animation: progress-animation 2s forwards;
+}  
+
+@keyframes progress-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+
+
+
+
+
+
+.projects-section {
+    padding: 50px 9%;
+}
+
+.projects-section h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    
+}
+
+.project-card {
+    background: #282e38;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #fff;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card .content {
+    padding: 20px;
+}
+
+.project-card .content h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.project-card .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.project-card .content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #7cf03d;
+    color: #1f242d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project-card .content a:hover {
+    background: #5cbf2a;
+}
+
+
+
+
+
+/* achievements Section */
+
+.achievements-section {
+    padding: 50px 9%;
+}
+
+.achievements-section h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.certificate-card {
+    background: #282e38;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #fff;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.certificate-card h3 {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #fff;
+   
+}
+
+.certificate-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.certificate-card .btn {
+    display: inline-block;
+    top: 10px;
+    padding: 8px 20px;
+    background: #7cf03d;
+    color: #1f242d;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.certificate-card .btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    border: 2px solid #7cf03d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 2rem;
+    background: #1f242d;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.contact-container {
+    
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+    max-width: 400px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+
+.contact-info p{
+    color: #fff;
+}
+
+.contact-info ul li {
+   
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.contact-info ul li i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #ff9800;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-form .input-box {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #7cf03d;
+    color: #1f242d;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn:hover {
+    background-color: #7cf03d;
+}
+
+
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f242d;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    h1, h2, p {
+        font-size: 1.2rem; /* Adjust font sizes for smaller screens */
+    }
+    .container {
+        padding: 10px; /* Add spacing */
+    }
+}
+
+.text-section {
+    margin-bottom: 20px;
+}
